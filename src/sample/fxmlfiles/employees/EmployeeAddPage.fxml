@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.employees.AddEmployeeController">
+   <children>
+      <AnchorPane prefHeight="420.0" prefWidth="620.0">
+         <children>
+            <TextField fx:id="firstName" layoutX="162.0" layoutY="117.0" prefHeight="26.0" prefWidth="119.0" promptText="firstname" />
+            <Text layoutX="65.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FIRSTNAME" />
+            <Text layoutX="65.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LASTNAME" />
+            <TextField fx:id="lastName" layoutX="162.0" layoutY="161.0" prefHeight="26.0" prefWidth="119.0" promptText="lastname" />
+            <TextField fx:id="fatherName" layoutX="162.0" layoutY="205.0" prefHeight="26.0" prefWidth="119.0" promptText="fathername" />
+            <Text layoutX="65.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FATHERNAME" />
+            <Text layoutX="65.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POSITION" />
+            <TextField fx:id="position" layoutX="162.0" layoutY="248.0" prefHeight="26.0" prefWidth="119.0" promptText="position" />
+            <TextField fx:id="salary" layoutX="162.0" layoutY="293.0" prefHeight="26.0" prefWidth="119.0" promptText="salary" />
+            <Text layoutX="65.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALARY" />
+            <Text layoutX="208.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add employee">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="418.0" layoutY="352.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="26.0" prefWidth="75.0" text="Add" />
+            <Button layoutX="508.0" layoutY="352.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="75.0" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

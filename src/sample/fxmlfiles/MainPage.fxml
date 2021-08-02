@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainPageController">
+   <children>
+      <TabPane fx:id="tabPane" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Projects">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="projectsTable" prefHeight="320.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="projectId" prefWidth="41.60003662109375" text="Id" />
+                            <TableColumn fx:id="projectName" prefWidth="93.5999755859375" text="Name" />
+                              <TableColumn fx:id="projectCost" prefWidth="67.20001220703125" text="Cost" />
+                              <TableColumn fx:id="projectDepName" prefWidth="100.0" text="Dep_name" />
+                              <TableColumn fx:id="projectBeg" prefWidth="71.20001220703125" text="Begin" />
+                              <TableColumn fx:id="projectEnd" prefWidth="73.5999755859375" text="End" />
+                              <TableColumn fx:id="projectEndReal" prefWidth="67.20001220703125" text="End_real" />
+                              <TableColumn fx:id="projectProfit" prefWidth="88.0" text="Profit" visible="false" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="488.0" layoutY="330.0" mnemonicParsing="false" onAction="#onDeleteProject" text="Delete selected" />
+                        <Button layoutX="376.0" layoutY="330.0" mnemonicParsing="false" onAction="#onUpdateProject" text="Update selected" />
+                        <Button layoutX="328.0" layoutY="330.0" mnemonicParsing="false" onAction="#onAddProject" text="Add" />
+                        <Button layoutX="14.0" layoutY="330.0" mnemonicParsing="false" onAction="#showProfits" text="SHOW PROFITS" />
+                        <Button layoutX="128.0" layoutY="330.0" mnemonicParsing="false" onAction="#updatePage" prefHeight="26.0" prefWidth="97.0" text="SHOW ALL" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Employees">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="employeesTable" prefHeight="320.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="employeeId" prefWidth="49.60003662109375" text="Id" />
+                            <TableColumn fx:id="employeeFirstName" prefWidth="95.99993896484375" text="First_name" />
+                              <TableColumn fx:id="employeeLastName" prefWidth="110.4000244140625" text="Last_name" />
+                              <TableColumn fx:id="employeeFatherName" prefWidth="109.5999755859375" text="Father_name" />
+                              <TableColumn fx:id="employeePosition" prefWidth="125.5999755859375" text="Position" />
+                              <TableColumn fx:id="employeeSalary" prefWidth="110.39996337890625" text="Salary" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="488.0" layoutY="330.0" mnemonicParsing="false" onAction="#onDeleteEmployee" text="Delete selected" />
+                        <Button layoutX="376.0" layoutY="330.0" mnemonicParsing="false" onAction="#onUpdateEmployee" text="Update selected" />
+                        <Button layoutX="328.0" layoutY="330.0" mnemonicParsing="false" onAction="#onAddEmployee" text="Add" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Departments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="departmentsTable" prefHeight="320.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="departmentId" prefWidth="67.20001220703125" text="Id" />
+                            <TableColumn fx:id="departmentName" prefWidth="530.4000244140625" text="Name" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="488.0" layoutY="330.0" mnemonicParsing="false" onAction="#onDeleteDepartment" text="Delete selected" />
+                        <Button layoutX="376.0" layoutY="330.0" mnemonicParsing="false" onAction="#onUpdateDepartment" text="Update selected" />
+                        <Button layoutX="328.0" layoutY="330.0" mnemonicParsing="false" onAction="#onAddDepartment" text="Add" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Departments_employees">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="departmentsEmployeesTable" prefHeight="320.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="departmentsEmployeesId" prefWidth="69.60003662109375" text="Id" />
+                              <TableColumn fx:id="departmentsName" prefWidth="162.39996337890625" text="Department" />
+                              <TableColumn fx:id="employeesName" prefWidth="364.0" text="Employee" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="488.0" layoutY="330.0" mnemonicParsing="false" onAction="#onDeleteDepartmentEmployee" text="Delete selected" />
+                        <Button layoutX="376.0" layoutY="330.0" mnemonicParsing="false" onAction="#onUpdateDepartmentEmployee" text="Update selected" />
+                        <Button layoutX="328.0" layoutY="330.0" mnemonicParsing="false" onAction="#onAddDepartmentEmployee" text="Add" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
